@@ -1,0 +1,39 @@
+{
+  "name": "vue-ssr-demo",
+  "version": "1.0.0",
+  "description": "demo for vue ssr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosl90/vue-ssr-demo.git"
+  },
+  "keywords": [
+    "demo",
+    "vue",
+    "vue.js",
+    "vuejs",
+    "ssr"
+  ],
+  "author": "kosl90",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kosl90/vue-ssr-demo/issues"
+  },
+  "homepage": "https://github.com/kosl90/vue-ssr-demo#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.22.0",
+    "express": "^4.15.2",
+    "vue": "^2.2.2",
+    "vue-server-renderer": "^2.2.2",
+    "vue-ssr-webpack-plugin": "^1.0.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.1",
+    "webpack-hot-middleware": "^2.17.1"
+  }
+}
