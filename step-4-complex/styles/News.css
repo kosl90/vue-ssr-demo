@@ -1,0 +1,28 @@
+.title {
+  line-height: 24px;
+  overflow: hidden;
+  zoom: 1;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.title .name {
+  float: left;
+  margin: 0;
+}
+
+.title .more {
+  float: right;
+}
+
+ul, li {
+  padding: 0;
+}
+
+.item {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 80px 0 15px;
+
+}
