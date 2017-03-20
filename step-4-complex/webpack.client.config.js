@@ -22,7 +22,12 @@ var webpackConfig = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          loaders: ['css-loader'],
+          loaders: {
+            css: ExtractTextPlugin.extract({
+              use: 'css-loader',
+              fallback: 'vue-style-loader', // this is a dep of vue-loader, so no need to explicitly install if using npm3
+            })
+          }
         }
       },
       {
@@ -34,8 +39,8 @@ var webpackConfig = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-	  use: 'css-loader',
-	}),
+          use: 'css-loader',
+        }),
       },
       {
         test: /\.png$/,

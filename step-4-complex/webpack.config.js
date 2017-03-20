@@ -18,8 +18,13 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          loader: ['css-loader'],
-	}
+          loader: {
+            css: ExtractTextPlugin.extract({
+              use: 'css-loader',
+              fallback: 'vue-style-loader', // this is a dep of vue-loader, so no need to explicitly install if using npm3
+            })
+          }
+        }
       },
       {
         test: /\.js$/,
@@ -30,8 +35,8 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-	  use: 'css-loader',
-	}),
+          use: 'css-loader',
+        }),
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
