@@ -34,5 +34,5 @@ module.exports = {
     new SSR(),
   ],
   // 移除多余的包，否则会出错！！！
-  externals: Object.keys(require('../../package.json').dependencies),
+  externals: Object.keys(require('../package.json').dependencies),
 }
